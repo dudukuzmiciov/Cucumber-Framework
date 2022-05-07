@@ -29,8 +29,6 @@ public class AddEmployeePage extends CommonMethods {
     @FindBy(id="chkLogin")
     public WebElement checkBox;
 
-
-
     @FindBy(id="user_name")
     public WebElement createUsername;
 
