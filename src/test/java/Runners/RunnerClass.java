@@ -35,7 +35,7 @@ import org.junit.runner.RunWith;
         //senario having the tag
         //use and if we need to execute scenarios from logical and keyword which will execute the scenarios
         //having both the tags in it
-        tags = "@test123" //tags - set the level of execution/executing scenarios as per my choice
+        tags = "@excel" //tags - set the level of execution/executing scenarios as per my choice
 )
 
 public class RunnerClass {

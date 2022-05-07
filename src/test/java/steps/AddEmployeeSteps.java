@@ -69,8 +69,9 @@ public class AddEmployeeSteps extends CommonMethods {
             sendText(addEmployeePage.firstNameField, firstNameValue);
             sendText(addEmployeePage.middleNameField, middleNameValue);
             sendText(addEmployeePage.lastNameField, lastNameValue);
+            Thread.sleep(5000);
             click(addEmployeePage.saveButton);
-            Thread.sleep(3000);
+
 
             //verification of adding an employee is HW
             click(employeeSearchPage.addEmployeeOption);
@@ -107,14 +108,14 @@ public class AddEmployeeSteps extends CommonMethods {
             sendText(addEmployeePage.createPassword, mapNewEmp.get("Password"));
             sendText(addEmployeePage.confirmPassword, mapNewEmp.get("Password"));
             click(addEmployeePage.saveButton);
-            Thread.sleep(3000);
+            Thread.sleep(5000);
             //to verify the employee, we will navigate to employee list option
             click(employeeSearchPage.empListOption);
             sendText(employeeSearchPage.idField, empIdValue);
             click(employeeSearchPage.searchButton);
 
             //it it returning the data from the row in results
-            List<WebElement> rowData = driver.findElements(By.xpath("//table[@id='resultTable']/tbody/tr"));
+            List<WebElement> rowData = driver.findElements(By.xpath("//*[@id='resultTable']/tbody/tr"));
             for(int i=0; i<rowData.size();  i++){
                 String rowText = rowData.get(i).getText();
                 System.out.println(rowText);
@@ -123,7 +124,7 @@ public class AddEmployeeSteps extends CommonMethods {
                 Assert.assertEquals(expectedData, rowText);
             }
             click(employeeSearchPage.addEmployeeOption);
-            Thread.sleep(2000);
+            Thread.sleep(5000);
         }
     }
 }
