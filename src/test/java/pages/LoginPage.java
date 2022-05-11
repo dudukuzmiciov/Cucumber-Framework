@@ -8,6 +8,7 @@ import utils.CommonMethods;
 public class LoginPage extends CommonMethods {
 
     //object repository
+    //these are our instance variables because not inside method or static keyword:
     @FindBy(id="txtUsername")
     public WebElement usernameBox;
 
@@ -17,6 +18,7 @@ public class LoginPage extends CommonMethods {
     @FindBy(id="btnLogin")
     public WebElement loginBtn;
 
+    //this is a constructor not a method (same name as class name)
     public LoginPage(){
         PageFactory.initElements(driver, this);
     }

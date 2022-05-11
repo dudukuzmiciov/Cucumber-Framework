@@ -33,7 +33,7 @@ Feature: Adding the employees in HRMS Application
       |tarik    |MS        |mujeeb  |
       |nassir   |MS        |volkan  |
 
-    #difference between @step examples table and @datatable is that datatable will execute only one time but examples
+    #difference between scenario outline  and @datatable is that datatable will execute only one time but scenario outline
     #will execute the hooks and background multiple times! :
   @test @datatable
   Scenario: Add employee using data table

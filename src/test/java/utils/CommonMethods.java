@@ -21,7 +21,7 @@ public class CommonMethods extends PageInitializers {
     public static WebDriver driver;
 
     public void openBrowserAndLauchApplication(){
-        ConfigReader.readProperties(Constants.CONFIGURATION_FILEPATH);
+        ConfigReader.readProperties(Constants.CONFIGURATION_FILEPATH); //class.method(to read it take the path from constants file)
         switch (ConfigReader.getPropertyValue("browser")){
             case "chrome":
                 WebDriverManager.chromedriver().setup();
